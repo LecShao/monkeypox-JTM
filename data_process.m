@@ -8,7 +8,7 @@ function [data] = data_process(alldata,country_num)
         end
     end
     data = data_temp(i:length,1)';
-    % n-day moving average
+    % n-day moving average if need
 %     data = move_ave(data,7);
 end
 

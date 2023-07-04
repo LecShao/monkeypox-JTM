@@ -5,8 +5,6 @@ function [Pd_Gen_time] = Gen_Gamma(mean_Gamma,std_Gamma,sz)
 % The output: a Gammy, a list of generation time with size of 1*sz
 b = std_Gamma^2/mean_Gamma;
 a = mean_Gamma/b;
-% Gamma_pd = makedist('Gamma','a',a,'b',b);
-% Gen_time = gamrnd(a,b,1,sz);
 Pd_Gen_time = zeros(1,sz);
 for t_i = 1:sz
     Pd_Gen_time(t_i) = gamcdf(t_i,a,b) - gamcdf((t_i-1),a,b); 

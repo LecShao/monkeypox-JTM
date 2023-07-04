@@ -18,8 +18,8 @@ for country_num = 1:9
     n_f = 1;
     R_mat = zeros(n_f,length(ydata));
     for i=1:n_f
-%         x0 = [0+10*rand(1),0.79*rand(1)];
-        x0 = [0.6,0.6];
+        x0 = [0+10*rand(1),0.79*rand(1)];
+%         x0 = [0.6,0.6];
         [x,resnorm,residual,exitflag,output,lambda,J] = lsqcurvefit(fun,x0,xdata,ydata,lb,ub,options);
         disp(x);
 
