@@ -54,8 +54,8 @@ for country_num = 1:9
         % caclulate median and 95CrI
         Re_median = median(Re);
         Re_sort = sort(Re);
-        lower_95_CrI_Re = Re_sort(50);
-        upper_95_CrI_Re = Re_sort(950);
+        lower_95_CrI_Re = Re_sort(25);
+        upper_95_CrI_Re = Re_sort(975);
         % save the results
         Re_last = zeros(2,3);
         Re_last(1,1) = Re_mean;
